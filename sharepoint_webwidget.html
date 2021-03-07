@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>VsaWebChatWidget</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://lumastar.serviceaide.com/luma-web-widget/latest/luma-web-widget.css" rel="stylesheet" type="text/css">
+  <style>
+  .luma-chat-toggle {
+    position: fixed;
+    background: #FFF;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06), 0 2px 32px rgba(0,0,0,0.16);
+    cursor: pointer;
+  }
+  </style>
+</head>
+
+<body>
+    <div id='botHere'></div>
+    <div class="luma-chat-toggle" onclick="toggleChatWidget()">
+      <i class="bot-icon"></i>
+    </div>
+    <script type="text/javascript" src="https://lumastar.serviceaide.com/luma-web-widget/latest/luma-web-widget.js"></script>
+    <script>
+       window.onmessage = function(e){
+  cosole.log(e);
+        function toggleChatWidget() {
+          LumaBot.toggleChatWidget();
+        }
+    </script>
+</body>
+
+</html>
